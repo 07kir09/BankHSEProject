@@ -1,5 +1,7 @@
 namespace AccountingForFinances.Commands;
-
+/// <summary>
+/// 
+/// </summary>
 public class CreateBankAccountCommand : ICommand
 {
     private readonly BankAccountFacade _bankAccountFacade;

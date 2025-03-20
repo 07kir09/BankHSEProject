@@ -11,23 +11,17 @@ public class BankAccountFacade
         _bankAccountRepository = bankAccountRepository;
     }
 
-    public BankAccount CreateBankAccount(string name, decimal initialBalance)
+    public void CreateBankAccount(string bankName, decimal initialBalance)
     {
-        var account = DomainFactory.CreateBankAccount(name, initialBalance);
-        _bankAccountRepository.Add(account);
-        return account;
-    }
-
-    public void UpdateBalance(Guid accountId, decimal amount)
-    {
-        var account = _bankAccountRepository.GetById(accountId);
-        if (account == null)
+        var account = new BankAccount
         {
-            throw new Exception("Счет не найден!!!");
-        }
-
-        account.UpdateBalance(amount);
-        _bankAccountRepository.Update(account);
+            Id = Guid.NewGuid(),
+            Name = bankName,
+            Balance = initialBalance
+            // При необходимости можно добавить AccountNumber и другие свойства.
+        };
+        _bankAccountRepository.Add(account);
+        Console.WriteLine("Банковский счёт успешно создан через BankAccountFacade.");
     }
 
     public BankAccount GetBankAccount(Guid id)
@@ -35,13 +29,8 @@ public class BankAccountFacade
         return _bankAccountRepository.GetById(id);
     }
 
-    public IList<BankAccount> GetAll()
+    public IList<BankAccount> GetAllBankAccounts()
     {
         return _bankAccountRepository.GetAll();
-    }
-
-    public void DeleteBankAccount(Guid id)
-    {
-        
     }
 }

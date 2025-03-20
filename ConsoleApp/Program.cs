@@ -2,6 +2,7 @@ using System;
 using Microsoft.Extensions.DependencyInjection;
 using AccountingForFinances;
 using AccountingForFinances.Analytics;
+using AccountingForFinances.Application.Facades;
 using AccountingForFinances.data;
 using AccountingForFinances.DataManagement;
 
@@ -34,6 +35,12 @@ namespace BankHSEProject.ConsoleApp
             // Регистрируем сервисы
             services.AddSingleton<AnalyticsService>();
             services.AddSingleton<DataManagementService>();
+            services.AddSingleton<BankAccountFacade>();
+            services.AddSingleton<AnalyticsService>();
+            services.AddSingleton<AnalyticsFacade>();
+            services.AddSingleton<CategoryFacade>();
+            services.AddSingleton<OperationFacade>();
+
 
             // Регистрируем импортеры (Transient, т.к. они не сохраняют состояние)
             services.AddTransient<CsvImporter>();

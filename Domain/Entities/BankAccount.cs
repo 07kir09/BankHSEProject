@@ -6,7 +6,7 @@ namespace AccountingForFinances;
 public class BankAccount : Entity, IVisitable
 {
     [JsonInclude]
-    public string Name { get; private set; }
+    public string Name { get; set; }
     [JsonInclude]
     public decimal Balance { get; set; }
 
