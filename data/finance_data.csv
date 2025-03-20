@@ -1,0 +1,16 @@
+RecordType;id;name;balance;catType;bankAccountId;opType;amount;date;description;categoryId
+BankAccount;11111111-1111-1111-1111-111111111111;Основной счет;10000.00;;;;;;;
+BankAccount;22222222-2222-2222-2222-222222222222;Карта Тинькофф;20000.00;;;;;;;
+BankAccount;33333333-3333-3333-3333-333333333333;Кредитка Альфа;5000.00;;;;;;;
+BankAccount;44444444-4444-4444-4444-444444444444;Долларовый счет;7000.00;;;;;;;
+BankAccount;55555555-5555-5555-5555-555555555555;Сбережения;30000.00;;;;;;;
+Category;aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa;Кафе;;Expense;;;;;;
+Category;bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb;Зарплата;;Income;;;;;;
+Category;cccccccc-cccc-cccc-cccc-cccccccccccc;Транспорт;;Expense;;;;;;
+Category;dddddddd-dddd-dddd-dddd-dddddddddddd;Кэшбэк;;Income;;;;;;
+Category;eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee;Развлечения;;Expense;;;;;;
+Operation;6f2d4c7b-9d3e-44d2-9c14-efa47d2f8f20;;;;11111111-1111-1111-1111-111111111111;Expense;450.00;2025-03-01T14:30:00;Обед в кафе;aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa
+Operation;d9b8c6f5-3f1a-4f4c-8e71-d5d1f6a6d3e2;;;;22222222-2222-2222-2222-222222222222;Income;75000.00;2025-03-05T10:00:00;Зарплата за март;bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb
+Operation;b2f3c4d5-1e6a-4f7b-9c8d-2e3a5d7b9f4c;;;;33333333-3333-3333-3333-333333333333;Expense;300.00;2025-03-07T08:15:00;Проезд на метро;cccccccc-cccc-cccc-cccc-cccccccccccc
+Operation;e5d6b7c8-9f1a-4e3d-8c5b-2a7d9f4c1e3a;;;;44444444-4444-4444-4444-444444444444;Income;250.00;2025-03-10T12:45:00;Кэшбэк за покупки;dddddddd-dddd-dddd-dddd-dddddddddddd
+Operation;c9e7d4b5-1f3a-4c8b-9e2d-6a7b5d3c2f8e;;;;55555555-5555-5555-5555-555555555555;Expense;1200.00;2025-03-15T20:00:00;Билеты в кино;eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee
